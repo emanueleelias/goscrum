@@ -1,5 +1,6 @@
 import {  useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
+import "./Login.styles.css"; 
 
 export const Login = () => {
 
@@ -25,14 +26,14 @@ export const Login = () => {
 
     const onSubmit = () => {
         localStorage.setItem("logged", "yes");
-        navigate("/tasks", {replace: true})
+        navigate("/tasks", {replace: true});
     }
 
     const formik = useFormik({ initialValues, validate, onSubmit });
     const { handleChange, handleSubmit, values, errors } = formik;
 
     return (
-        <div className="container">
+        <div className="auth">
             <form onSubmit={handleSubmit}>
                 <h1>Iniciar Sesión</h1>
                 <div>

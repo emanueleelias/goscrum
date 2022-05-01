@@ -1,4 +1,4 @@
-import './App.css';
+import './index.css';
 import { lazy, Suspense } from "react"
 import { Login } from './components/Views/Login';
 import { Tasks } from './components/Views/Tasks/Tasks';
